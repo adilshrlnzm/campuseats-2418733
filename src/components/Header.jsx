@@ -1,5 +1,4 @@
-function  Header({ cartCount }) {
-const cartCount=0 //BECOME STATE IN PART C
+function  Header({cartCount }) {
 
 return (
     <header className="header">

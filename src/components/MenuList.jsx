@@ -1,5 +1,5 @@
 import MenuItemCard from './MenuItemCard.jsx'
-function MenuList({ items }) {
+function MenuList({ items, onAdd } ) {
  if (items.length === 0) {
  return <p className="muted">No items on this menu yet.</p>
  }
