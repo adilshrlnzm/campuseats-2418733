@@ -1,0 +1,122 @@
+[
+  {
+    "id": "2418733-fowlboys",
+    "name": "Fowlboys Diner",
+    "location": "Student Center, 1st Floor",
+    "openHours": "8:00 am - 10:00 pm",
+    "isOpen": true,
+    "image": "https://i.pinimg.com/736x/08/75/c2/0875c29eb045be7a86da9bedc34b6010.jpg",
+    "menu": [
+      { "id": "2418733-s1", "name": "Nashville Sandwich", "description": "nashville chicken thigh, house slaw, house pickles, comeback sauce, pretzel buns", "price": 26, "category": "Sandwiches", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/45604ac8357483c2b60f5c17ef365abcde3e3e3d-1920x2400.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-s2", "name": "OG Sandwich", "description": "chicken thigh, jalapeño pickles, Cluck Sauce, Fowl Jam, potato buns", "price": 24, "category": "Sandwiches", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/a3540bf9231dab20f627cd192e7906eca02d08b8-1920x2400.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-s3", "name": "Motherclucker", "description": "chicken thigh, house slaw, jalapeño pickles, Fowl Jam, potato buns", "price": 25, "category": "Sandwiches", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/f5f48e038d8ac44fd800d17540769687f6c0ffbe-1920x2400.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-s4", "name": "Sugar Daddy", "description": "honey butter chicken thigh, house slaw, house pickles, garlic mayo, potato buns", "price": 25, "category": "Sandwiches", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/3167b45069df04dbc966b4d10b31f16e7f55ec6d-1920x2400.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-s5", "name": "Fillet O Fish", "description": "breaded perch fillet, house tartare, cheese slice, potato buns", "price": 24, "category": "Sandwiches", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/3167b45069df04dbc966b4d10b31f16e7f55ec6d-1920x2400.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-s6", "name": "The Cluckfather", "description": "chicken thigh, american cheese, tomato, mix lettuce, pickle onion, buffalo mayo & pretzel buns", "price": 28, "category": "Sandwiches", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/393cc2a6b605bc542664afebff23166698ff5d6b-1920x2400.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-s7", "name": "Chicken Sando", "description": "chicken thigh, boiled egg, american cheese, tomato, salad, pesto mayo & brioche bread", "price": 26, "category": "Sandwiches", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/bd1980756f432e503ed0bc53a97094f28e3e6cf6-1920x2400.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-s8", "name": "Nash Dog", "description": "Nashville chorizo sausage, coleslaw, comeback sauce, mustard mayo, potato roll & pickle onion", "price": 28, "category": "Sandwiches", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/02efd67b20a9ee3e9e377a984df9463e35272503-1856x2304.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-s9", "name": "Prawn Hustle", "description": "fried tiger prawn meat, tartare sauce, marinara mayo & potato roll", "price": 28, "category": "Sandwiches", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/32407aac8c67813e4b1b183252fc4ab0f00f636e-1920x2400.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-sh1", "name": "Chicken & Waffle", "description": "2 pc bone in fried chicken OR 5 pc tenders, buttermilk waffle, Fowl Jam & a glass of maple syrup (signature dish)", "price": 35, "category": "For Sharing", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/ddf111b8922d2b89ff2d6f390d03f18c2663e15a-3000x4500.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-sh2", "name": "House Salad", "description": "mesclun mix, cherry tomato, crispy pork, and peanut sesame dressing. add boneless fried chicken thigh +RM 8", "price": 18, "category": "For Sharing", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/22b090e037e0faee4356bfa3eac112f7ea6fb7d4-1856x2304.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-sh3", "name": "Fried White Bait", "description": "crispy whitebait fish, mustard mayo", "price": 20, "category": "For Sharing", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/49707bdda5fc3db1ec899f8d357bf8ea26046ea7-1856x2304.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-sh4", "name": "Disco Fries", "description": "chicken gravy, garlic aioli, grated cheddar cheese, pickled onion", "price": 20, "category": "For Sharing", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/9a8551298514c974697bfef40f6851c54160ab19-1402x1122.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-sh5", "name": "Buffalo Ranch Tots", "description": "tots loaded with buffalo chicken bits, jalapeno & ranch", "price": 25, "category": "For Sharing", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/f5580ed3c006a6370237cc6352c8be887ee468bd-1856x2304.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-sh6", "name": "Mac N Cheese", "description": "macaroni with 3 types of cheese", "price": 18, "category": "For Sharing", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/64312bfae5c3c470f9b04ef942914bce23e4747e-1856x2304.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-sh7", "name": "Nachos", "description": "corn tortilla chips, 3 cheese sauce, chicken chilli, pico de gallo, guacamole & sour cream", "price": 35, "category": "For Sharing", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/2689d571b2c4f1ff97f6005feba4005b0bcdddef-1920x2400.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-sh8", "name": "Loaded Fries", "description": "shoestring fries, chicken chilli, cheddar cheese, jalapenos, ranch sauce & fried shallot", "price": 28, "category": "For Sharing", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/ab55970dd90c587dab09d10b0601339ff9aad5b7-4597x5746.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-sh9", "name": "Hot Honey Habanero Wings", "description": "wings coated with habanero honey", "price": 28, "category": "For Sharing", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/85d66af34236063af3eecf39a3c8c021d3da6ffd-1856x2304.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-sh10", "name": "Tater Tots", "description": "crispy tater tots", "price": 18, "category": "For Sharing", "available": true, "image": "https://huawei-food-cms.grab.com/compressed_avif/items/MYITE20251016073514020713/photo/a26d46d8_2_512_FFFFFF.avif" },
+      { "id": "2418733-sh11", "name": "Fries", "description": "classic fries", "price": 13, "category": "For Sharing", "available": true, "image": "https://www.onelovelylife.com/wp-content/uploads/2026/01/Crispy-Oven-Fries15-2.jpg" },
+      { "id": "2418733-sh12", "name": "Crack Fries", "description": "signature crack fries", "price": 15, "category": "For Sharing", "available": true, "image": "https://huawei-food-cms.grab.com/compressed_avif/items/url-ee7b32dd/photo/3252f5f868c50d56.avif" },
+      { "id": "2418733-d1", "name": "Ice Water", "description": "Refreshing chilled water", "price": 1, "category": "Drinks", "available": true, "image": "https://preview.redd.it/ice-water-iced-water-or-water-with-ice-v0-0wn7d9bspti81.jpg?width=1481&format=pjpg&auto=webp&s=fbc651d1240d6b294f3ed7747cdf9e2fee9924c2" },
+      { "id": "2418733-d2", "name": "Soft Drinks", "description": "Choice of Coca-Cola, Sprite, or Fanta", "price": 4, "category": "Drinks", "available": true, "image": "https://www.foodbev.com/_media/8f1abd_bd3eb9cedc474a7f9a74f6ef457661b1~mv2.jpeg/v1/fill/w_744,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/8f1abd_bd3eb9cedc474a7f9a74f6ef457661b1~mv2.jpeg" },
+      { "id": "2418733-d3", "name": "Vanilla Milkshake", "description": "Handcrafted vanilla shake made with Australian Ice Cream and authentic ingredients.", "price": 16.5, "category": "Drinks", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/712238aeda11ee9f37d738a13ece2a75d52c6261-1600x2400.jpg?w=1920&q=75&auto=format" },
+      { "id": "2418733-d4", "name": "Chocolate Milkshake", "description": "Rich chocolate shake made with premium ice cream.", "price": 16.5, "category": "Drinks", "available": true, "image": "https://thumbs.dreamstime.com/b/classic-chocolate-milkshake-diner-style-retro-style-american-milkshake-tall-glass-topped-whipped-cream-chocolate-398258177.jpg" },
+      { "id": "2418733-d5", "name": "Strawberry Milkshake", "description": "Sweet and creamy strawberry shake.", "price": 16.5, "category": "Drinks", "available": true, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmBEoycyoS8GVXx3296L6s5cMHALrVOqpHGI7csksWVxrQWlPyQTe3h_g&s=10" },
+      { "id": "2418733-d6", "name": "Cereal Milkshake", "description": "Nostalgic cereal-infused creamy shake.", "price": 16.5, "category": "Drinks", "available": true, "image": "https://cdn.sanity.io/images/yjklmv4g/production/a5ed71956e4c1ff0bd4fe320ea86b49339defc0e-1280x1600.webp?w=1920&q=75&auto=format" },
+      { "id": "2418733-d7", "name": "Coffee Milkshake", "description": "Bold coffee blended into a sweet shake.", "price": 16.5, "category": "Drinks", "available": true, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRDwBX52J6n6ubkW4jq-g8PE70bUPdPopyXE98G5qubNjYBY4iGnKcNFk&s=10" },
+      { "id": "2418733-d8", "name": "Peanut Butter Milkshake", "description": "Creamy peanut butter blended into a rich shake.", "price": 16.5, "category": "Drinks", "available": true, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ25anX4MypVaGWMlHrwDAeBg5cDaiuAPkL0S3akhtAEt5qZ__5RVZQJ-UH&s=10" }
+    ]
+  },
+  {
+    "id": "2411925-furtive-katfe",
+    "name": "Furtive Katfe",
+    "location": "Mahallah Uthman, Block E",
+    "openHours": "10:00 am - 10pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "2411925-f1",
+        "name": "Meow Cupcake",
+        "description": "Cupcake shaped like a kitty cat",
+        "price": 4.5,
+        "category": "Dessert",
+        "popular": true,
+        "available": true
+      },
+      {
+        "id": "2411925-f2",
+        "name": "Carrot Cake",
+        "description": "Yummy carrot cake, big enuf for a family",
+        "price": 16.0,
+        "category": "Dessert",
+        "popular": true,
+        "available": true
+      },
+      {
+        "id": "2411925-f3",
+        "name": "Tuna Taiyaki",
+        "description": "Fish-shaped pancake cake keki",
+        "price": 2.5,
+        "category": "Dessert",
+        "popular": false,
+        "available": false
+      },
+      {
+        "id": "2411925-d1",
+        "name": "Chocolate Catpucchino",
+        "description": "Brewed in purrfection",
+        "price": 5.0,
+        "category": "Drinks",
+        "popular": true,
+        "available": true
+      },
+      {
+        "id": "2411925-d2",
+        "name": "Pawmegranate Juice",
+        "description": "The only fruit i can make a pun of",
+        "price": 3.5,
+        "category": "Drinks",
+        "popular": false,
+        "available": false
+      },
+      {
+        "id": "2411925-d3",
+        "name": "Matcha Catnip Latte",
+        "description": "Matcha with some catnip (decoration)",
+        "price": 6.9,
+        "category": "Drinks",
+        "popular": true,
+        "available": true
+      },
+      {
+        "id": "2411925-s1",
+        "name": "Whiskers Fries",
+        "description": "Put them on your cheeks!",
+        "price": 3.0,
+        "category": "Snacks",
+        "popular": true,
+        "available": true
+      },
+      {
+        "id": "2411925-s2",
+        "name": "Meownigiri",
+        "description": "Savory onigini with cat ears",
+        "price": 1.5,
+        "category": "Snacks",
+        "popular": true,
+        "available": true
+      }
+    ]
+  }
+]

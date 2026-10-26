@@ -5,6 +5,29 @@
    do nothing until you build the components that use them.
    You do not need to write CSS in this course; focus on React.
    ===================================================================== */
+   /* Style for the Vendor Card Image */
+/* 1. This is the container box */
+.thumb {
+  width: 100%;
+  height: 120px; /* You can change this to whatever height you like */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden; /* IMPORTANT: Cuts off any image parts that stick out */
+}
+
+/* 2. This makes the image fit perfectly inside the box */
+.thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This crops the image to fill the box without stretching it */
+  display: block;    /* Removes tiny default spacing under images */
+}
 
 :root {
   --green: #00685e;
@@ -154,3 +177,20 @@ a.card:hover { border-color: var(--green-light); }
   .nav { flex-wrap: wrap; gap: 0.4rem 1rem; font-size: 0.95rem; }
   .container { padding: 1rem; }
 }
+
+.link { background: none; border: 0; padding: 0; font: inherit; color: #fff; cursor: pointer; }
+.link.danger { color: #b3261e; font-size: 0.9rem; }
+.cart-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; align-items: start; }
+@media (max-width: 720px) { .cart-layout { grid-template-columns: 1fr; } }
+.cart-list { list-style: none; margin: 0; padding: 0; }
+.cart-line { display: grid; grid-template-columns: 1fr auto auto auto; gap: 1rem; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid #e4e7eb; }
+.cart-name { margin: 0; font-weight: 600; }
+.qty { display: flex; align-items: center; gap: 0.5rem; }
+.qty button { width: 32px; height: 32px; border-radius: 8px; border: 1px solid #c5cbd3; background: #fff; cursor: pointer; }
+.line-total { font-weight: 600; margin: 0; }
+.cart-total { text-align: right; font-size: 1.15rem; font-weight: 700; margin: 1rem 0 0; }
+.form { display: flex; flex-direction: column; gap: 0.35rem; }
+.form label { font-weight: 600; font-size: 0.9rem; margin-top: 0.5rem; }
+.form input, .form select { padding: 0.5rem; border: 1px solid #c5cbd3; border-radius: 8px; font: inherit; }
+.field-error { color: #b3261e; font-size: 0.85rem; margin: 0; }
+.error { border-left: 4px solid #b3261e; }

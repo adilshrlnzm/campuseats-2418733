@@ -5,7 +5,13 @@ function VendorCard({ vendor, isSelected, onSelect }) {
  className={isSelected ? 'card vendor-card selected' : 'card vendor-card'}
  onClick={() => onSelect(vendor.id)}
  >
- <div className="thumb" aria-hidden="true">{vendor.name.charAt(0)}</div>
+       <div className="thumb" aria-hidden="true">
+        {vendor.image ? (
+          <img src={vendor.image} alt={vendor.name} className="thumb-img" />
+        ) : (
+          vendor.name.charAt(0)
+        )}
+      </div>
  <div>
  <h3>{vendor.name}</h3>
  <p className="muted">{vendor.location}</p>
