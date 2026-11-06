@@ -29,11 +29,23 @@ how to use the like button
 - Tool(s): Deepseek
 - What I asked for: Help doing my B6 feature ,Favourite items, and to explain all my codes line by line for my practical test.
 
+
 - What I kept, changed or rejected, and why:  For the favourites feature, I had to move the state up to App.jsx so the "Favourites only" toggle would actually filter the whole menu.
 
 
 - One thing the AI got wrong and how I fixed it: it didnt get anything wrong
 
+## Week 4
 
+- Tool(s): Deepseek
+- What I asked for:
+- i also told it to make the item menu card to be in row of 3 when scrolling, and changed abit of the add to cart button.
+- i also told the ai to change the checkout form in cart page.
+- i told ai to change my favourite page layout too.
+
+- What I kept, changed or rejected, and why: i changed everything
+
+
+- One thing the AI got wrong and how I fixed it:  theres alot of trial n error i had to change the index.css alot of times to get the feature finally right.
 
 
