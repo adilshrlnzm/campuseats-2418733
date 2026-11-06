@@ -1,15 +1,10 @@
 /* =====================================================================
-   CampusEats starter CSS (BICS 3301): complete, Weeks 1 to 11
-   Paste ALL of this into src/index.css once, in Week 1, and leave it.
-   Rules for later weeks (cart, forms, login, dashboard, offline banner…)
-   do nothing until you build the components that use them.
-   You do not need to write CSS in this course; focus on React.
+   THUMBNAIL OVERRIDE (top rules for menu-item cards)
+   Used by MenuItemCard, VendorCard.
    ===================================================================== */
-   /* Style for the Vendor Card Image */
-/* 1. This is the container box */
 .thumb {
   width: 100%;
-  height: 120px; /* You can change this to whatever height you like */
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,20 +13,23 @@
   font-weight: bold;
   border-radius: 8px;
   margin-bottom: 12px;
-  overflow: hidden; /* IMPORTANT: Cuts off any image parts that stick out */
+  overflow: hidden;
 }
 
-/* 2. This makes the image fit perfectly inside the box */
-.thumb-img {
+/* Makes <img> fill .thumb without stretching */
+.thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* This crops the image to fill the box without stretching it */
-  display: block;    /* Removes tiny default spacing under images */
+  object-fit: cover;
+  display: block;
 }
 
+/* =====================================================================
+   CSS VARIABLES + RESET
+   ===================================================================== */
 :root {
   --green: #00685e;
-  --green-light: #e6f2f0;  
+  --green-light: #e6f2f0;
   --text: #1f2933;
   --muted: #616e7c;
   --bg: #f7f8fa;
@@ -40,10 +38,12 @@
   color: var(--text);
   background: var(--bg);
 }
-
 * { box-sizing: border-box; }
 body { margin: 0; }
 
+/* =====================================================================
+   HEADER (Header.jsx)
+   ===================================================================== */
 .header {
   display: flex;
   justify-content: space-between;
@@ -64,10 +64,16 @@ body { margin: 0; }
   font-size: 0.85rem;
 }
 
+/* =====================================================================
+   LAYOUT / CONTAINER (Layout.jsx)
+   ===================================================================== */
 .container { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
 .section-title { font-size: 1.2rem; margin: 1.5rem 0 0.75rem; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
 
+/* =====================================================================
+   CARDS (generic panel used everywhere)
+   ===================================================================== */
 .card {
   background: #fff;
   border-radius: var(--radius);
@@ -88,15 +94,24 @@ body { margin: 0; }
 .status { display: inline-block; margin-top: 0.4rem; padding: 0.1rem 0.6rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
 .status.open { background: #e3f7e8; color: #1b7a3a; }
 .status.closed { background: #fdecea; color: #b3261e; }
+
+/* =====================================================================
+   BUTTONS
+   ===================================================================== */
 .btn {
   width: 100%; padding: 0.55rem; border: 0; border-radius: 8px;
   background: var(--green); color: #fff; font-weight: 600; cursor: pointer;
 }
 .btn:disabled { background: #c5cbd3; cursor: not-allowed; }
 
+/* =====================================================================
+   FOOTER (Footer.jsx)
+   ===================================================================== */
 .footer { text-align: center; color: var(--muted); padding: 2rem 1rem; font-size: 0.85rem; }
 
-/* Week 2 additions */
+/* =====================================================================
+   VENDOR GRID (HomePage / VendorCard)
+   ===================================================================== */
 .vendor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
 button.card { font: inherit; color: inherit; text-align: left; border: 2px solid transparent; cursor: pointer; width: 100%; }
 button.card:hover { border-color: var(--green-light); }
@@ -104,18 +119,11 @@ button.card:hover { border-color: var(--green-light); }
 .card h3 { font-size: 1.05rem; }
 .tag { display: inline-block; margin: 0 0 0.3rem; padding: 0.05rem 0.5rem; border-radius: 999px; background: var(--green-light); color: var(--green); font-size: 0.75rem; font-weight: 600; }
 
-/* Week 3 additions */
-.link { background: none; border: 0; padding: 0; font: inherit; color: #fff; cursor: pointer; }
-.link.danger { color: #b3261e; font-size: 0.9rem; }
-.cart-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; align-items: start; }
-@media (max-width: 720px) { .cart-layout { grid-template-columns: 1fr; } }
-.cart-list { list-style: none; margin: 0; padding: 0; }
-.cart-line { display: grid; grid-template-columns: 1fr auto auto auto; gap: 1rem; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid #e4e7eb; }
-.cart-name { margin: 0; font-weight: 600; }
-.qty { display: flex; align-items: center; gap: 0.5rem; }
-.qty button { width: 32px; height: 32px; border-radius: 8px; border: 1px solid #c5cbd3; background: #fff; cursor: pointer; font-size: 1.1rem; }
-.line-total { font-weight: 600; margin: 0; }
-.cart-total { text-align: right; font-size: 1.15rem; font-weight: 700; margin: 1rem 0 0; }
+ 
+
+/* =====================================================================
+   FORM (CheckoutForm) + Errors (Status)
+   ===================================================================== */
 .form { display: flex; flex-direction: column; gap: 0.35rem; }
 .form label { font-weight: 600; font-size: 0.9rem; margin-top: 0.5rem; }
 .form input, .form select { padding: 0.5rem; border: 1px solid #c5cbd3; border-radius: 8px; font: inherit; }
@@ -123,74 +131,354 @@ button.card:hover { border-color: var(--green-light); }
 .field-error { color: #b3261e; font-size: 0.85rem; margin: 0; }
 .error { border-left: 4px solid #b3261e; }
 
-/* Week 4 additions */
+/* =====================================================================
+   ACTIVE NAV LINK (NavLink auto-adds .active)
+   ===================================================================== */
 .nav a.active { text-decoration: underline; text-underline-offset: 6px; }
 .logo-link { color: #fff; text-decoration: none; }
 a.card { text-decoration: none; color: inherit; border: 2px solid transparent; }
 a.card:hover { border-color: var(--green-light); }
 .container a { color: var(--green); }
+
+/* =====================================================================
+   ORDERS (OrdersPage)
+   ===================================================================== */
 .order-list { list-style: none; padding: 0; display: grid; gap: 0.75rem; }
 .container a.card { color: inherit; }
 
-/* Week 5 additions */
+/* =====================================================================
+   EXTRA (Weeks 5–11 — unused in Part 1, harmless)
+   ===================================================================== */
 .auth-page { max-width: 420px; margin: 2rem auto; }
 .auth-page h2 { margin: 0 0 0.5rem; }
 .btn-outline { background: #fff; color: var(--green); border: 1px solid var(--green); margin-top: 0.5rem; }
 .user-name { opacity: 0.9; font-size: 0.9rem; }
 .nav { align-items: center; }
-
-/* Week 6 additions */
 .status-steps { display: flex; gap: 0.4rem; list-style: none; padding: 0; margin: 0.5rem 0 0; flex-wrap: wrap; }
 .status-steps li { padding: 0.15rem 0.6rem; border-radius: 999px; background: #eef0f3; color: var(--muted); font-size: 0.8rem; font-weight: 600; }
 .status-steps li.done { background: var(--green); color: #fff; }
-
-/* Week 7 additions */
 .row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
 .btn-small { width: auto; padding: 0.4rem 0.8rem; }
 .dash-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; margin-top: 1rem; align-items: start; }
 @media (max-width: 720px) { .dash-grid { grid-template-columns: 1fr; } }
 .photo { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 0.5rem; }
-
-/* Week 10: service worker messages */
-.toast {
-  position: fixed; right: 1rem; bottom: 1rem; z-index: 10;
-  display: flex; align-items: center; gap: 0.75rem;
-  background: #12302d; color: #fff; padding: 0.75rem 1rem;
-  border-radius: var(--radius); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
+.toast { position: fixed; right: 1rem; bottom: 1rem; z-index: 10; display: flex; align-items: center; gap: 0.75rem; background: #12302d; color: #fff; padding: 0.75rem 1rem; border-radius: var(--radius); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); }
 .toast button { background: #e8a33d; color: #12302d; border: 0; border-radius: 8px; padding: 0.4rem 0.8rem; font-weight: 600; cursor: pointer; }
 .toast button.link-dark { background: transparent; color: #bfd8d5; text-decoration: underline; }
+.offline-banner { background: #fff4e0; color: #7a4b00; border-bottom: 1px solid #f0d6a8; padding: 0.6rem 1.5rem; text-align: center; font-size: 0.95rem; }
+.pending-badge { display: inline-block; margin: 0.25rem 0; padding: 0.15rem 0.6rem; background: #fff4e0; color: #7a4b00; border-radius: 999px; font-size: 0.85rem; font-weight: 600; }
 
-/* Week 11: offline-first */
-.offline-banner {
-  background: #fff4e0; color: #7a4b00; border-bottom: 1px solid #f0d6a8;
-  padding: 0.6rem 1.5rem; text-align: center; font-size: 0.95rem;
-}
-.pending-badge {
-  display: inline-block; margin: 0.25rem 0; padding: 0.15rem 0.6rem;
-  background: #fff4e0; color: #7a4b00; border-radius: 999px; font-size: 0.85rem; font-weight: 600;
-}
-
-/* Week 9: an installable app must fit a phone screen */
+/* =====================================================================
+   MOBILE
+   ===================================================================== */
 @media (max-width: 640px) {
   .header { flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem 1rem; }
   .nav { flex-wrap: wrap; gap: 0.4rem 1rem; font-size: 0.95rem; }
   .container { padding: 1rem; }
 }
 
-.link { background: none; border: 0; padding: 0; font: inherit; color: #fff; cursor: pointer; }
-.link.danger { color: #b3261e; font-size: 0.9rem; }
-.cart-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; align-items: start; }
-@media (max-width: 720px) { .cart-layout { grid-template-columns: 1fr; } }
-.cart-list { list-style: none; margin: 0; padding: 0; }
-.cart-line { display: grid; grid-template-columns: 1fr auto auto auto; gap: 1rem; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid #e4e7eb; }
-.cart-name { margin: 0; font-weight: 600; }
-.qty { display: flex; align-items: center; gap: 0.5rem; }
-.qty button { width: 32px; height: 32px; border-radius: 8px; border: 1px solid #c5cbd3; background: #fff; cursor: pointer; }
-.line-total { font-weight: 600; margin: 0; }
-.cart-total { text-align: right; font-size: 1.15rem; font-weight: 700; margin: 1rem 0 0; }
-.form { display: flex; flex-direction: column; gap: 0.35rem; }
-.form label { font-weight: 600; font-size: 0.9rem; margin-top: 0.5rem; }
-.form input, .form select { padding: 0.5rem; border: 1px solid #c5cbd3; border-radius: 8px; font: inherit; }
-.field-error { color: #b3261e; font-size: 0.85rem; margin: 0; }
-.error { border-left: 4px solid #b3261e; }
+/* =========================================
+   MENU ITEM FIXES (3 per row + Vertical Scroll)
+   ========================================= */
+
+/* 1. Grid layout: 3 items per row, wraps to next line, scrolls down */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Forces exactly 3 columns */
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+/* Responsive: drop to 2 columns on tablets, 1 on phones */
+@media (max-width: 850px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 2. Card setup: flex column so buttons align at the bottom */
+.menu-grid > .card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3. Make the card perfectly fit the picture using aspect-ratio */
+.center-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.huge-menu-image {
+  width: 100%;       
+  aspect-ratio: 4 / 3; /* Scales perfectly with the card width */
+  height: auto;        /* No fixed height */
+  object-fit: contain; /* Shows the full picture */
+  background-color: #f7f8fa;  
+  border-radius: 12px;
+}
+
+.huge-menu-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  border-radius: 12px;
+  background: var(--green-light);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+/* Heart Button: Rounded Rectangle with Outline */
+.pop-heart-btn {
+  width: 100%;                  
+  padding: 0.6rem;
+  background: transparent;
+  border: 2px solid #c5cbd3;    
+  border-radius: 10px;          
+  color: #616e7c;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  margin-top: auto; /* Pushes the button to the bottom of the card */
+  transition: all 0.2s ease;
+}
+
+/* Heart Hover Pop-out */
+.pop-heart-btn:hover {
+  transform: translateY(-3px) scale(1.02); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+  border-color: #b3261e; 
+  color: #b3261e;
+}
+
+/* Add to Cart Button: Rounded Rectangle Outline */
+.btn-outline {
+  width: 100%;
+  padding: 0.8rem;
+  background: transparent !important; 
+  border: 2px solid var(--green);     
+  border-radius: 10px;                
+  color: var(--green) !important;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: var(--green-light) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 104, 94, 0.2);
+}
+
+.btn-outline:disabled {
+  border-color: #c5cbd3;
+  color: #c5cbd3 !important;
+  cursor: not-allowed;
+}
+/* =========================================
+   BUTTON CLICK EFFECT (Matte Dark Green + "Added")
+   ========================================= */
+
+.btn-outline.btn-added {
+  background-color: #004d45 !important; /* Matte, heavy dark green */
+  border: 2px solid #004d45 !important; /* Border matches the background */
+  color: #ffffff !important;            /* White text */
+  box-shadow: none !important;          /* No glow */
+  transform: none !important;           /* No lifting */
+  transition: none !important;          /* Snaps instantly */
+  cursor: default;                      
+}
+
+/* Prevent the hover effect from firing while it says "Added" */
+.btn-outline.btn-added:hover {
+  background-color: #004d45 !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+/* =========================================
+   MODERN CART ITEM STYLES
+   ========================================= */
+
+.cart-line-modern {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e4e7eb;
+}
+
+/* --- The Image --- */
+.cart-image-wrapper {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.cart-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cart-image-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: var(--green-light);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* --- Details (Middle) --- */
+.cart-item-details {
+  flex-grow: 1; /* Pushes the buttons to the right */
+}
+
+.cart-item-name {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.cart-item-total {
+  font-weight: 700;
+  color: var(--green);
+  margin: 0.5rem 0 0 0;
+}
+
+/* --- Actions (Right Side) --- */
+.cart-item-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns buttons to the right */
+  gap: 0.75rem;
+}
+
+/* --- Modern Grouped Stepper --- */
+.qty-stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #c5cbd3;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.qty-stepper button {
+  background: #f7f8fa;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text);
+  transition: background 0.2s;
+}
+
+.qty-stepper button:hover {
+  background: #e4e7eb;
+}
+
+.qty-stepper span {
+  width: 36px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* --- Remove Button --- */
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: #b3261e;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.remove-btn:hover {
+  color: #8c1d17;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 500px) {
+  .cart-line-modern {
+    flex-wrap: wrap; /* Lets the buttons drop to the next line on tiny screens */
+  }
+  
+  .cart-item-details {
+    width: calc(100% - 96px); /* Takes up remaining space next to image */
+  }
+  
+  .cart-item-actions {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+/* =========================================
+   MERGED CART & CHECKOUT LAYOUT
+   ========================================= */
+
+.cart-merged-container {
+  max-width: 700px; /* Keeps the merged card a nice readable width */
+  margin: 0 auto;
+}
+
+.cart-merged-card {
+  padding: 2rem;
+}
+
+/* Dashed line separating food items from the form */
+.cart-divider {
+  border: none;
+  border-top: 2px dashed #e4e7eb;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+/* Adjust the form spacing inside the merged card */
+.cart-merged-card .form {
+  margin-top: 1rem;
+}
+
+/* Override the old two-column grid so it doesn't interfere */
+.cart-layout {
+  display: block;
+}
+/* Fix for Link elements acting as buttons */
+a.btn {
+  color: #ffffff !important; /* Forces text to be white */
+  display: block;            /* Forces full width to work */
+  text-align: center;        /* Centers the text */
+  text-decoration: none;     /* Removes the underline */
+}
+/* =====================================================================
+   SUMMARY
+   =====================================================================
+   All the styling in one file: colors, layout, cards, buttons, forms,
+   cart layout, mobile responsiveness. Every class used in the JSX
+   components is defined here.
+   Think of it as the paint and wallpaper of the whole app.
+   ===================================================================== */

@@ -1,6 +1,6 @@
 import MenuItemCard from './MenuItemCard.jsx';
 
-function MenuList({ items, onAdd, favorites, onToggleFavorite }) {
+function MenuList({ items }) {
   if (items.length === 0) {
     return <p className="muted" style={{ marginTop: '1rem' }}>No items found.</p>;
   }
@@ -11,9 +11,6 @@ function MenuList({ items, onAdd, favorites, onToggleFavorite }) {
         <MenuItemCard
           key={item.id}
           item={item}
-          onAdd={onAdd}
-          isFavorite={favorites.includes(item.id)}
-          onToggleFavorite={onToggleFavorite}
         />
       ))}
     </div>
