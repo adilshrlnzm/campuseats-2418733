@@ -2,10 +2,20 @@
 import { NavLink } from 'react-router';
 // useCart gives the live cart count for the badge
 import { useCart } from '../hooks/useCart';
+import { useNavigate } from 'react-router'
+import { useAuth } from '../hooks/useAuth.js'
+
 
 function Header() {
   // Pull count from context (auto re-renders when cart changes)
   const { count } = useCart();
+  const { user, logout } = useAuth()
+const navigate = useNavigate()
+
+async function handleLogout() {
+ await logout()
+ navigate('/')
+}
 
   return (
     <header className="header">
@@ -17,6 +27,14 @@ function Header() {
         <NavLink to="/favourites" className="link">Favourites</NavLink>
         {/* Cart link with live badge */}
         <NavLink to="/cart" className="link">Cart <span className="badge">{count}</span></NavLink>
+        {user ? (
+        <>
+        <span className="user-name">Hi, {user.displayName || user.email}</span>
+        <button type="button" className="link" onClick={handleLogout}>Log out</button>
+        </>
+        ) : (
+        <NavLink to="/login">Log in</NavLink>
+        )} 
         <NavLink to="/orders" className="link">Orders</NavLink>
       </nav>
     </header>

@@ -15,8 +15,7 @@ export function useVendors() {
     setLoading(true);
     setError(null);
 
-    fetch('/api/vendors.json', { signal: controller.signal })
-      .then((res) => {
+      fetch('/api/vendors.json', { signal: controller.signal })      .then((res) => {
         // Non-2xx → treat as an error
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();

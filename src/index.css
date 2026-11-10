@@ -474,6 +474,29 @@ a.btn {
   text-align: center;        /* Centers the text */
   text-decoration: none;     /* Removes the underline */
 }
+/* Guest Favourite Link */
+.login-to-save {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  background: #f7f8fa;
+  border: 2px dashed #c5cbd3;
+  border-radius: 10px;
+  color: #616e7c !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  margin-top: auto; /* Pushes it to the bottom like the heart button */
+  transition: all 0.2s ease;
+}
+
+.login-to-save:hover {
+  background: var(--green-light);
+  border-color: var(--green);
+  color: var(--green) !important;
+}
 /* =====================================================================
    SUMMARY
    =====================================================================

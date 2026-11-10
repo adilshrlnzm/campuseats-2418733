@@ -48,4 +48,14 @@ how to use the like button
 
 - One thing the AI got wrong and how I fixed it:  theres alot of trial n error i had to change the index.css alot of times to get the feature finally right.
 
+## Week 5
+
+- Tool(s): Deepseek
+- What I asked for: to debug my code
+
+
+- What I kept, changed or rejected, and why: i found out that i typed an extra "space" in import { createContext } from 'react '. so my website crashed, so i just correct that. 
+
+
+- One thing the AI got wrong and how I fixed it:    it didnt get anything wrong.
 

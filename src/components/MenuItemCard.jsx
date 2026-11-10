@@ -1,26 +1,24 @@
 import { useState } from 'react';
+import { Link } from 'react-router'; // Import Link
 import { useCart } from '../hooks/useCart';
+import { useAuth } from '../hooks/useAuth'; // Import useAuth
 
 function MenuItemCard({ item }) {
   const { addToCart, favorites, toggleFavorite } = useCart();
+  const { user } = useAuth(); // Get user status
+  
   const isFav = favorites.includes(item.id);
-
   const [isAdded, setIsAdded] = useState(false);
 
   const handleAddClick = () => {
     if (!item.available) return;
-    
     addToCart(item);        
     setIsAdded(true);       
-    
-    setTimeout(() => {
-      setIsAdded(false);
-    }, 500);
+    setTimeout(() => setIsAdded(false), 500);
   };
 
   return (
     <div className="card">
-      
       <div className="center-image-wrapper">
         {item.image ? (
           <img src={item.image} alt={item.name} className="huge-menu-image" />
@@ -33,15 +31,21 @@ function MenuItemCard({ item }) {
       <p className="muted">{item.description}</p>
       <p className="price">RM {item.price.toFixed(2)}</p>
 
-      <button
-        type="button"
-        className="pop-heart-btn"
-        onClick={() => toggleFavorite(item.id)}
-      >
-        {isFav ? '❤️ Favourited' : '🤍 Favourite'}
-      </button>
+      {/* B5 Feature: Conditional Rendering */}
+      {user ? (
+        <button
+          type="button"
+          className="pop-heart-btn"
+          onClick={() => toggleFavorite(item.id)}
+        >
+          {isFav ? '❤️ Favourited' : '🤍 Favourite'}
+        </button>
+      ) : (
+        <Link to="/login" className="login-to-save">
+          Log in to save favourites
+        </Link>
+      )}
 
-      {/* This line changes the text to "Added" */}
       <button
         type="button"
         className={`btn-outline ${isAdded ? 'btn-added' : ''}`}
